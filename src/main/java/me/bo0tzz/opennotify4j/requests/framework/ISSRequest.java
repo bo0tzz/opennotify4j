@@ -12,4 +12,6 @@ public interface ISSRequest<T> {
     void handleResponse(Response response) throws IOException;
 
     Request getRequest();
+
+    void perform();
 }

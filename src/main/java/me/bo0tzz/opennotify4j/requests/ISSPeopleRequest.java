@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 public class ISSPeopleRequest extends AbstractISSRequest<ISSPeople> {
 
     @Builder
-    protected ISSPeopleRequest(Consumer<ISSPeople> callback) {
+    private ISSPeopleRequest(Consumer<ISSPeople> callback) {
         super("astros.json", callback, ISSPeople.class);
     }
 

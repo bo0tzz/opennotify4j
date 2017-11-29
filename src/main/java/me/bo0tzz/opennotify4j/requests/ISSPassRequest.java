@@ -10,7 +10,7 @@ import java.util.function.Consumer;
 
 public class ISSPassRequest extends GetISSRequest<ISSPass> {
 
-    protected ISSPassRequest(Consumer<ISSPass> callback, Map<String, String> queryParams) {
+    private ISSPassRequest(Consumer<ISSPass> callback, Map<String, String> queryParams) {
         super("iss-pass.json", callback, ISSPass.class, queryParams);
     }
 
@@ -60,6 +60,8 @@ public class ISSPassRequest extends GetISSRequest<ISSPass> {
         }
 
         public ISSPassRequest build() {
+            if (!queryParams.containsKey("lat")) throw new NullPointerException("Latitude cannot be null!");
+            if (!queryParams.containsKey("lon")) throw new NullPointerException("Longitude cannot be null!");
             return new ISSPassRequest(callback, queryParams);
         }
 

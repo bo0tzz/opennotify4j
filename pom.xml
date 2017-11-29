@@ -6,7 +6,7 @@
 
     <groupId>me.bo0tzz</groupId>
     <artifactId>opennotify4j</artifactId>
-    <version>0.1.6-ALPHA</version>
+    <version>0.1.7-ALPHA</version>
 
     <dependencies>
         <dependency>

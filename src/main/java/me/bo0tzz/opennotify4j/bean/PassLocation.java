@@ -21,7 +21,7 @@ public class PassLocation extends Location {
         this.datetime = datetime;
     }
 
-    static class PassLocationBuilder extends Location.LocationBuilder {
+    public static class PassLocationBuilder extends Location.LocationBuilder {
 
     }
 

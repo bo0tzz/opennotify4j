@@ -20,4 +20,8 @@ public class Location {
         this.longitude = longitude;
     }
 
+    public static class LocationBuilder {
+
+    }
+
 }

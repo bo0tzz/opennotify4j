@@ -24,8 +24,7 @@ public abstract class AbstractISSRequest<T> implements ISSRequest<T> {
     protected final Consumer<T> callback;
     protected final Class<T> callbackType;
 
-    @Override
-    public Request getRequest() {
+    protected Request getRequest() {
         return new Request.Builder()
                 .url(API_URL + endpoint)
                 .build();
@@ -40,8 +39,7 @@ public abstract class AbstractISSRequest<T> implements ISSRequest<T> {
         return endpoint;
     }
 
-    @Override
-    public void handleResponse(Response response) throws IOException {
+    protected void handleResponse(Response response) throws IOException {
         String body = getBody(response);
 
         if (body != null && callback != null) {

@@ -6,7 +6,7 @@
 
     <groupId>me.bo0tzz</groupId>
     <artifactId>opennotify4j</artifactId>
-    <version>0.1.7-ALPHA</version>
+    <version>0.1.8-ALPHA</version>
 
     <inceptionYear>2017</inceptionYear>
 
@@ -115,7 +115,7 @@
                     </goals>
                 </execution>
             </executions>
-        </plugin>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>

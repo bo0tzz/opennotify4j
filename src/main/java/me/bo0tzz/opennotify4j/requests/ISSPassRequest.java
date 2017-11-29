@@ -1,6 +1,7 @@
 package me.bo0tzz.opennotify4j.requests;
 
 import me.bo0tzz.opennotify4j.api.ISSPass;
+import me.bo0tzz.opennotify4j.bean.Location;
 import me.bo0tzz.opennotify4j.requests.framework.GetISSRequest;
 
 import java.util.HashMap;
@@ -29,6 +30,10 @@ public class ISSPassRequest extends GetISSRequest<ISSPass> {
         public Builder callback(Consumer<ISSPass> callback) {
             this.callback = callback;
             return this;
+        }
+
+        public Builder location(Location location) {
+            return this.latitude(location.getLatitude()).longitude(location.getLongitude());
         }
 
         public Builder latitude(Float latitude) {

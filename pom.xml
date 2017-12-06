@@ -8,6 +8,9 @@
     <artifactId>opennotify4j</artifactId>
     <version>0.1.8-ALPHA</version>
 
+    <name>Open Notify 4j</name>
+    <description>A java wrapper for the open-notify.org API</description>
+    <url>https://github.com/bo0tzz/opennotify4j</url>
     <inceptionYear>2017</inceptionYear>
 
     <issueManagement>

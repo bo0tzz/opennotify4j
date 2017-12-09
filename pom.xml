@@ -6,7 +6,7 @@
 
     <groupId>me.bo0tzz</groupId>
     <artifactId>opennotify4j</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <name>Open Notify 4j</name>
     <description>A java wrapper for the open-notify.org API</description>

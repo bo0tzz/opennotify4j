@@ -5,7 +5,7 @@ Opennotify4j is a java wrapper for the open-notify.org API, and allows you to ea
 ### Maven
 
 You can add this API as a dependency using Maven.
-```
+```xml
 <dependencies>
   <dependency>
     <groupId>me.bo0tzz</groupId>
@@ -28,7 +28,7 @@ Let's go over all three in order.
 
 First, to request the current location of the ISS, we create an ISSLocationRequest. When creating a request, we need to pass it a callback method that will be executed once the request completes. We can create our request as follows:
 
-```
+```java
 ISSLocationRequest request = ISSLocationRequest.builder()
                 .callback((issLocation) -> {
                     System.out.println(issLocation.getLocation());
@@ -37,7 +37,7 @@ ISSLocationRequest request = ISSLocationRequest.builder()
 
 This piece of code has created an ISSLocationRequest and given it a callback method that will print out the information received from the API. However, we haven't actually told our code to send the request yet. Doing that is simply as follows:
 
-```
+```java
 request.perform();
 ```
 
@@ -47,7 +47,7 @@ This will perform the request and, after it receives a response, execute the cal
 
 Second is requesting the amount of people that are currently in space. This is similarly easy:
 
-```
+```java
 ISSPeopleRequest request = ISSPeopleRequest.builder()
       .callback((issPeople -> {
           System.out.println("There are currently " + issPeople.getNumber() + " people in space!");
@@ -60,7 +60,7 @@ request.perform();
 
 Requesting the times at which the ISS will pass over a given location is a bit more complicated, since we need to pass the API a location for which to return the results for. A Location object is created as follows:
 
-```
+```java
 Location location = Location.builder()
                 .latitude(29.7604f)
                 .longitude(-95.3698f)
@@ -69,7 +69,7 @@ Location location = Location.builder()
 
 We then use this Location object in the builder for our request, along with the callback:
 
-```
+```java
 ISSPassRequest request = ISSPassRequest.builder()
         .location(location)
         .callback((issPass -> {
